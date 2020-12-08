@@ -1,0 +1,14 @@
+ウェルカムページ	ログイン前	welcome.vue
+会員登録・ログインページ	ログイン前	beforeLogin.vue
+プロジェクト一覧ページ	ログイン後	loggedIn.vue
+ダッシュボード	ログイン後	default.vue
+ログアウト	ログイン前	logout.vue
+
+
+ront/components/welcome
+├── welAbout.vue    # このサイトについて・サイトの説明
+├── welAppBar.vue   # ウェルカムページのツールバー
+├── welCompany.vue  # 会社詳細
+├── welContact.vue  # お問合せ
+├── welPrice.vue    # 製品・サービスの価格・プラン
+└── welProducts.vue # 製品・サービスの紹介

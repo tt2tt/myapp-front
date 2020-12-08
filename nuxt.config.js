@@ -70,13 +70,18 @@ export default {
   // 追加
   // Doc: https://nuxt-community.github.io/nuxt-i18n/basic-usage.html#nuxt-link
   i18n: {
+    // 対応言語の設定
     locales: ['ja', 'en'],
+    // デフォルト言語の設定
     defaultLocale: 'ja',
     // Doc: https://kazupon.github.io/vue-i18n/api/#properties
     vueI18n: {
+      // 翻訳がない場合
       fallbackLocale: 'ja',
       // silentTranslationWarn: true,
+      // 警告の設定
       silentFallbackWarn: true,
+      // メッセージファイルの指定
       messages: {
         ja: require('./locales/ja.json'),
         en: require('./locales/en.json')
