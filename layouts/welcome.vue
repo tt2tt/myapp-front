@@ -1,9 +1,12 @@
 <template>
   <v-app>
     <wel-app-bar
-    :menus="menus"
+      :menus="menus"
+      :img-height="imgHeight"
     />
+    <!-- 値の設定 -->
     <v-img
+      id="scroll-top"
       dark
       src="https://picsum.photos/id/20/1920/1080?blur=5"
       gradient="to top right, rgba(19,84,122,.6), rgba(128,208,199,.9)"
@@ -35,24 +38,25 @@
         fluid
         :style="{ maxWidth: '1280px' }"
       >
-      <!-- 繰り返し処理 -->
+        <!-- 繰り返し処理 -->
         <v-row
           v-for="(menu, i) in menus"
           :key="`menu-${i}`"
         >
-        <v-col
-          cols="12"
-        >
-        <v-card flat>
-          <v-card-title class="justify-center display-1">
-            <!-- 日本語化 -->
-            {{ $t(`menus.${menu.title}`) }}
-          </v-card-title>
-          <v-card-text class="text-center">
-            {{ menu.subtitle }}
-          </v-card-text>
-        </v-card>
-      </v-col>
+          <v-col
+            :id="menu.title"
+            cols="12"
+          >
+            <v-card flat>
+              <v-card-title class="justify-center display-1">
+                <!-- 日本語化 -->
+                {{ $t(`menus.${menu.title}`) }}
+              </v-card-title>
+              <v-card-text class="text-center">
+                {{ menu.subtitle }}
+              </v-card-text>
+            </v-card>
+          </v-col>
           <v-col cols="12">
             <div :is="`wel-${menu.title}`" />
           </v-col>
