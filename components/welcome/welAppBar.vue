@@ -9,9 +9,9 @@
     <app-logo
       @click.native="goTo('scroll-top')"
     />
-    <v-toolbar-title>
-      {{ appName }}
-    </v-toolbar-title>
+    <app-title
+      class="hidden-mobile-and-down"
+    />
     <!-- 右寄せ -->
     <v-spacer />
     <v-toolbar-items class="ml-2">
@@ -39,9 +39,8 @@ export default {
       default: 0
     }
   },
-  data ({ $config: { appName }, $store }) {
+  data ({ $store }) {
     return {
-      appName,
       scrollY: 0,
       appBarHeight: $store.state.styles.beforeLogin.appBarHeight
     }
