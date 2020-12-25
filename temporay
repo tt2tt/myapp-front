@@ -12,3 +12,8 @@ ront/components/welcome
 ├── welContact.vue  # お問合せ
 ├── welPrice.vue    # 製品・サービスの価格・プラン
 └── welProducts.vue # 製品・サービスの紹介
+
+befLoginFormCard.vue … フォームを中央に配置するカード
+userFormName.vue … 名前を入力するフォーム
+userFormEmail.vue … メールアドレスを入力するフォーム
+userFormPassword.vue … パスワードを入力するフォーム

@@ -70,6 +70,7 @@ export default {
   // 追加
   // Doc: https://nuxt-community.github.io/nuxt-i18n/basic-usage.html#nuxt-link
   i18n: {
+    strategy: 'no_prefix',
     // 対応言語の設定
     locales: ['ja', 'en'],
     // デフォルト言語の設定
