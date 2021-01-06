@@ -8,8 +8,16 @@ export const state = () => ({
   }
 })
 
-export const getters = {}
+export const getters = {
+  setLoggedIn (state, payload) {
+    state.loggedIn = payload
+  }
+}
 
 export const mutations = {}
 
-export const actions = {}
+export const actions = {
+  login ({ commit }) {
+    commit('setLoggedIn', true)
+  }
+}
