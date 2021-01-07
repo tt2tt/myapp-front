@@ -1,6 +1,6 @@
 export const state = () => ({
   // ログイン状態の管理
-  loggedIn: false,
+  loggedIn: true,
   styles: {
     beforeLogin: {
       appBarHeight: 56
