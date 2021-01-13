@@ -1,6 +1,6 @@
 export const state = () => ({
   // ログイン状態の管理
-  loggedIn: true,
+  loggedIn: false,
   styles: {
     beforeLogin: {
       appBarHeight: 56
@@ -24,6 +24,10 @@ export const getters = {}
 export const mutations = {
   setLoggedIn (state, payload) {
     state.loggedIn = payload
+  },
+
+  setCurrentProject (state, payload) {
+    state.current.project = payload
   }
 }
 
@@ -34,5 +38,10 @@ export const actions = {
 
   logout ({ commit }) {
     commit('setLoggedIn', false)
+  },
+
+  getCurrentProject ({ state, commit }, params) {
+    const currentProject = state.projects.find(project => project.id === Number(params.id))
+    commit('setCurrentProject', currentProject)
   }
 }
