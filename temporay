@@ -17,3 +17,13 @@ befLoginFormCard.vue … フォームを中央に配置するカード
 userFormName.vue … 名前を入力するフォーム
 userFormEmail.vue … メールアドレスを入力するフォーム
 userFormPassword.vue … パスワードを入力するフォーム
+
+
+front/pages/project
+└── _id
+    ├── components.vue  # /project/1/components
+    ├── dashboard.vue   # /project/1/dashboard
+    ├── help.vue        # /project/1/help
+    ├── layouts.vue     # /project/1/layouts
+    ├── pages.vue       # /project/1/pages
+    └── settings.vue    # /project/1/settings
